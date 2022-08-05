@@ -1,0 +1,9 @@
+{
+  "query": "query SearchReportWoodDealCount($size: Int!, $number: Int!, $filter: Filter, $orders: [Order!]) {\n  searchReportWoodDeal(filter: $filter, pageable: {number: $number, size: $size}, orders: $orders) {\n    total\n    number\n    size\n    overallBuyerVolume\n    overallSellerVolume\n    __typename\n  }\n}\n",
+  "variables": {
+    "size": 20,
+    "number": 0,
+    "filter": null
+  },
+  "operationName": "SearchReportWoodDealCount"
+}
