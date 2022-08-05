@@ -159,9 +159,8 @@ namespace A2ParserTestTask
                 return false;
 
             DateTime Date = DateTime.ParseExact(deal.Date, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
-            if (Date.Year >= 1994 && Date <= DateTime.Now)
-                return true;
-            return false;
+            
+            return (Date.Year >= 1994 && Date <= DateTime.Now);
         }
 
         private int UpdateContractor(ContractorModel contractor)
