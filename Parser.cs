@@ -65,7 +65,7 @@ namespace A2ParserTestTask
 
                 DealsInfo info = await Api.GetDealsInfo();
 
-                int pagesCount = info.total / PageSize;
+                int pagesCount = (int)Math.Ceiling((double)info.total / PageSize);
 
                 for (int i = 0; i < pagesCount && !token.IsCancellationRequested; i++)
                 {
