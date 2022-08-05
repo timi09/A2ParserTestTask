@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace A2ParserTestTask.Data.Models
+﻿namespace A2ParserTestTask.Data.Models
 {
     public class DealModel
     {
