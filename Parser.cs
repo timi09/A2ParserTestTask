@@ -155,9 +155,11 @@ namespace A2ParserTestTask
 
         private bool ValidDeal(DealModel deal)
         {
+            if (deal.Number == null || deal.Date == null)
+                return false;
+
             DateTime Date = DateTime.ParseExact(deal.Date, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
-            if (deal.Number != null && deal.Date != null
-                && Date.Year >= 1994 && Date <= DateTime.Now)
+            if (Date.Year >= 1994 && Date <= DateTime.Now)
                 return true;
             return false;
         }
