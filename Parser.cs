@@ -139,10 +139,8 @@ namespace A2ParserTestTask
 
         private bool ValidContractor(ContractorModel contractor) 
         {
-            if (contractor.Name != null && contractor.INN != null 
-                && contractor.Name.Length > MinNameLen && (IsValidINN(contractor.INN) || (contractor.Name == "Физическое лицо" && contractor.INN == "")))
-                return true;
-            return false;
+            return contractor.Name != null && contractor.INN != null
+                && contractor.Name.Length > MinNameLen && (IsValidINN(contractor.INN) || (contractor.Name == "Физическое лицо" && contractor.INN == ""));
         }
 
         private bool IsValidINN(string str)
